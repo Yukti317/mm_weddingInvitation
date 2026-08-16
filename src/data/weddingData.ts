@@ -76,7 +76,7 @@ export const WEDDING_EVENTS: EventDetail[] = [
 
   {
     id: 'wedding',
-    title: 'The Royal Wedding',
+    title: 'The Wedding',
     subTitle: '💍 The Vows & Sacred Pheras',
     date: '26 November 2026',
     time: ' 12:39 PM Mandap Pheras',

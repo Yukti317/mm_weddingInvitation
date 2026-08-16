@@ -115,33 +115,33 @@ const selectedImage = STYLE_IMAGES[style];
       {/* STYLE 1: WATERCOLOR PAINTING */}
       {style === 'watercolor' && (
         <div className="relative p-6 bg-amber-50/90 rounded-2xl shadow-2xl border border-amber-200/60 overflow-hidden">
-          {/* Paper texture overlay */}
-          <div className="absolute inset-0 bg-[radial-gradient(#d4af37_1px,transparent_1px)] [background-size:16px_16px] opacity-10 pointer-events-none" />
-          
-          {/* Watercolor paint splash decorations */}
-          <div className="absolute -top-10 -right-10 w-32 h-32 bg-pink-300/30 rounded-full blur-2xl" />
-          <div className="absolute -bottom-10 -left-10 w-32 h-32 bg-amber-300/30 rounded-full blur-2xl" />
+  {/* Paper texture overlay */}
+  <div className="absolute inset-0 bg-[radial-gradient(#d4af37_1px,transparent_1px)] [background-size:16px_16px] opacity-10 pointer-events-none" />
 
-          <div className="relative rounded-lg overflow-hidden border-4 border-white shadow-inner">
-            <div className="relative aspect-[3/4] w-full overflow-hidden bg-rose-50">
-              {/* Image with Watercolor Filter Effect */}
-              <div 
-                className="w-full h-full bg-cover bg-center transition-transform duration-1000 scale-105 group-hover:scale-110"
-                style={{
-                  backgroundImage: `url('${selectedImage}')`,
-                  filter: 'contrast(1.08) saturate(1.2) sepia(0.15)',
-                }}
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-rose-950/40 via-transparent to-amber-200/20 mix-blend-color-burn" />
-              <div className="absolute inset-0 opacity-40 mix-blend-soft-light bg-[radial-gradient(circle,#fbcfe8,transparent)]" />
-            </div>
-          </div>
+  {/* Watercolor paint splash decorations */}
+  <div className="absolute -top-10 -right-10 w-32 h-32 bg-pink-300/30 rounded-full blur-2xl" />
+  <div className="absolute -bottom-10 -left-10 w-32 h-32 bg-amber-300/30 rounded-full blur-2xl" />
 
-          <div className="mt-4 text-center font-serif">
-            <h4 className="text-xl font-bold text-amber-950 italic">{caption || 'Mukti ❤️ Mihir'}</h4>
-            <p className="text-xs text-amber-800/80 uppercase tracking-widest mt-1">Watercolor Fine Art • 2026</p>
-          </div>
-        </div>
+  <div className="relative isolate rounded-lg overflow-hidden border-4 border-white shadow-inner">
+    <div className="relative aspect-[3/4] w-full overflow-hidden bg-rose-50">
+      {/* Image with Watercolor Filter Effect */}
+      <div
+        className="w-full h-full bg-cover bg-center transition-transform duration-1000 scale-105 group-hover:scale-110"
+        style={{
+          backgroundImage: `url('${selectedImage}')`,
+          filter: 'contrast(1.08) saturate(1.2) sepia(0.15)',
+        }}
+      />
+      <div className="absolute inset-0 bg-gradient-to-t from-rose-950/25 via-transparent to-amber-200/15 mix-blend-multiply" />
+      <div className="absolute inset-0 opacity-30 mix-blend-overlay bg-[radial-gradient(circle,#fbcfe8,transparent)]" />
+    </div>
+  </div>
+
+  <div className="mt-4 text-center font-serif">
+    <h4 className="text-xl font-bold text-amber-950 italic">{caption || 'Mukti ❤️ Mihir'}</h4>
+    <p className="text-xs text-amber-800/80 uppercase tracking-widest mt-1">Watercolor Fine Art • 2026</p>
+  </div>
+</div>
       )}
 
       {/* STYLE 2: EDITORIAL MAGAZINE COVER */}
