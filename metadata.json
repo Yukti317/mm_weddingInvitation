@@ -1,0 +1,6 @@
+{
+  "name": "Mukti & Mihir Wedding Invitation",
+  "description": "A cinematic interactive wedding invitation and love story website for Mukti and Mihir.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
