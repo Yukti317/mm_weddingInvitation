@@ -3,7 +3,7 @@
  * Plays "Ritviz - Liggi" style energetic wedding groove using Web Audio API Synth Engine
  * + support for external audio source, with beat pulse callbacks.
  */
-
+import Ishaqhai from '../../assets/audio/Ishq_hai.mp3';
 type BeatCallback = (beatNumber: number, time: number) => void;
 
 class WeddingAudioEngine {
@@ -22,7 +22,7 @@ class WeddingAudioEngine {
     // Try creating fallback Audio element for Ritviz - Liggi
     if (typeof window !== 'undefined') {
       try {
-     this.audioEl = new Audio('/assets/audio/Ishq_hai.mp3');
+     this.audioEl = new Audio(Ishaqhai);
     //  this.audioEl = new Audio('assets/audio/Ritviz.mp3');
         this.audioEl.loop = true;
         this.audioEl.volume = this.volume;
