@@ -22,7 +22,7 @@ class WeddingAudioEngine {
     // Try creating fallback Audio element for Ritviz - Liggi
     if (typeof window !== 'undefined') {
       try {
-     this.audioEl = new Audio('assets/audio/Ishq_hai.mp3');
+     this.audioEl = new Audio('/assets/audio/Ishq_hai.mp3');
     //  this.audioEl = new Audio('assets/audio/Ritviz.mp3');
         this.audioEl.loop = true;
         this.audioEl.volume = this.volume;
