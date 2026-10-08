@@ -23,6 +23,22 @@ interface FamilyMember {
 // For tight headshots, 'center' or 'center 30%' usually works fine.
 const BRIDE_FAMILY: FamilyMember[] = [
   {
+    id: 'f5',
+    name: 'Ratilal Mehta',
+    relation: 'Grandfather',
+    intro: 'Storyteller, blessing-giver, the family\u2019s quiet anchor.',
+    image: dada,
+    imagePosition: 'center 15%',
+  },
+  {
+    id: 'f6',
+    name: 'Shantaben Mehta',
+    relation: 'Grandmother',
+    intro: 'Her recipes taste like home, no matter where home is.',
+    image: ba,
+    imagePosition: 'center 15%',
+  },
+  {
     id: 'f1',
     name: 'VipulKumar Mehta',
     relation: 'Father of the Bride',
@@ -54,22 +70,7 @@ const BRIDE_FAMILY: FamilyMember[] = [
     image: pransi,
     imagePosition: 'center 15%',
   },
-  {
-    id: 'f5',
-    name: 'Ratilal Mehta',
-    relation: 'Grandfather',
-    intro: 'Storyteller, blessing-giver, the family\u2019s quiet anchor.',
-    image: dada,
-    imagePosition: 'center 15%',
-  },
-  {
-    id: 'f6',
-    name: 'Shantaben Mehta',
-    relation: 'Grandmother',
-    intro: 'Her recipes taste like home, no matter where home is.',
-    image: ba,
-    imagePosition: 'center 15%',
-  },
+  
 ];
 
 // Typewriter effect — types out text once, triggered externally

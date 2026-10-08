@@ -3,14 +3,14 @@ import { motion } from 'motion/react';
 import { Sparkles, Heart, Bookmark, Star } from 'lucide-react';
 import { COUPLE_PHOTOS } from '../data/couplePhotos';
 import img1 from '../../assets/img/img6.jpeg';
-import img2 from '../../assets/img/img2.jpeg';
-import img3 from '../../assets/img/img3.jpeg';
+import img2 from '../../assets/img/img2.jpg';
+import img3 from '../../assets/img/img3.jpg';
 import img4 from '../../assets/img/img4.jpeg';
-import img5 from '../../assets/img/img9.jpeg';
+import img5 from '../../assets/img/img9.jpg';
 import img6 from '../../assets/img/img1.jpeg';
 import img7 from '../../assets/img/img7.jpeg';
-import img10 from '../../assets/img/img10.jpeg';
-import img11 from '../../assets/img/img11.jpeg';
+import img10 from '../../assets/img/img10.jpg';
+import img11 from '../../assets/img/img11.jpg';
 
 export type ArtisticStyle =
   | 'vector'
@@ -162,7 +162,7 @@ export const PhotoTransformer: React.FC<PhotoTransformerProps> = ({
             <div className="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-black/60" />
 
             {/* Top Magazine Header */}
-            <div className="absolute top-0 inset-x-0 p-3 sm:p-6 flex flex-col items-center justify-start text-center">
+            {/* <div className="absolute top-0 inset-x-0 p-3 sm:p-6 flex flex-col items-center justify-start text-center">
               <div className="flex items-center justify-between w-full text-[8px] sm:text-[10px] tracking-[0.15em] sm:tracking-[0.3em] font-mono text-amber-200/80 uppercase mb-1 border-b border-amber-500/30 pb-1">
                 <span>LIMITED WEDDING EDITION</span>
                 <span>VOL. 26 • NOV 2026</span>
@@ -173,7 +173,7 @@ export const PhotoTransformer: React.FC<PhotoTransformerProps> = ({
               <p className="text-[10px] sm:text-xs tracking-[0.2em] sm:tracking-[0.4em] uppercase text-rose-200/90 font-light mt-0.5 sm:mt-1">
                 THE CELEBRATION ISSUE
               </p>
-            </div>
+            </div> */}
 
             {/* Side Cover Headlines */}
             <div className="absolute left-3 sm:left-6 bottom-16 sm:bottom-24 space-y-2 sm:space-y-3 max-w-[140px] sm:max-w-[200px]">

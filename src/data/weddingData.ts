@@ -1,12 +1,13 @@
 import { EventDetail, StoryScene, GalleryItem, Blessing } from '../types';
 import img1 from '../../assets/img/img6.jpeg';
-import img2 from '../../assets/img/img2.jpeg';
-import img3 from '../../assets/img/img3.jpeg';
+import img2 from '../../assets/img/img2.jpg';
+import img3 from '../../assets/img/img3.jpg';
 import img4 from '../../assets/img/img4.jpeg';
-import img5 from '../../assets/img/img5.jpeg';
+import img5 from '../../assets/img/img5.jpg';
 import img6 from '../../assets/img/img6.jpeg';
+import img17 from '../../assets/img/img17.jpg';
 import img7 from '../../assets/img/img7.jpeg';
-import img8 from '../../assets/img/img8.jpeg';
+import img8 from '../../assets/img/img8.jpg';
 
 export const BRIDE_NAME = 'Mukti';
 export const GROOM_NAME = 'Mihir';
@@ -170,7 +171,7 @@ export const STORY_SCENES: StoryScene[] = [
     title: 'Just You & Me',
     subtitle: 'Scene 6 • Together',
     style: 'magazine',
-    image: img6,
+    image: img17,
     dateLabel: 'Our Favorite Place',
     description:
       'There is something beautiful about simply being together. No perfect setting, no perfect plan — just two people enjoying each other and creating another memory along the way.',
