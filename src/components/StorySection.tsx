@@ -34,24 +34,24 @@ export const StorySection: React.FC = () => {
   };
 
   return (
-    <section id="our-story" className="relative py-24 px-4 bg-stone-950 text-white overflow-hidden border-t border-amber-500/20">
-      {/* Background Cinematic Lighting */}
-      <div className="absolute top-0 inset-x-0 h-64 bg-gradient-to-b from-stone-900 to-transparent pointer-events-none" />
-      <div className="absolute bottom-0 inset-x-0 h-64 bg-gradient-to-t from-stone-950 to-transparent pointer-events-none" />
+    <section id="our-story" className="relative py-24 px-4 bg-[#F8E8E5] text-[#332629] overflow-hidden border-t border-[#C9A45C]/30">
+      {/* Background Subtle Ambience */}
+      <div className="absolute top-0 inset-x-0 h-40 bg-gradient-to-b from-[#FFF9F0]/60 to-transparent pointer-events-none" />
+      <div className="absolute bottom-0 inset-x-0 h-40 bg-gradient-to-t from-[#FFF9F0]/60 to-transparent pointer-events-none" />
 
       <div className="max-w-6xl mx-auto space-y-10 relative z-10">
         {/* Section Header */}
         <div className="text-center space-y-4 max-w-2xl mx-auto">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-stone-900 border border-amber-500/30 text-amber-300 text-xs uppercase tracking-widest font-mono">
-            <BookOpen className="w-3.5 h-3.5 text-amber-400" />
-            <span>Interactive Love Story</span>
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#FFF9F0] border border-[#C9A45C] text-[#7A1F35] text-xs uppercase tracking-widest font-mono shadow-sm">
+            <BookOpen className="w-3.5 h-3.5 text-[#C9A45C]" />
+            <span className="font-semibold">Interactive Love Story</span>
           </div>
 
-          <h2 className="text-4xl sm:text-5xl md:text-6xl font-serif font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-amber-200 via-amber-100 to-amber-300">
+          <h2 className="text-4xl sm:text-5xl md:text-6xl font-serif font-extrabold text-[#7A1F35]">
             Our Story In 6 Art Forms
           </h2>
 
-          <p className="text-stone-300 text-sm sm:text-base font-serif italic">
+          <p className="text-[#332629] text-sm sm:text-base font-serif italic">
             "With every chapter, our picture transforms into a new artistic masterpiece."
           </p>
         </div>
@@ -64,8 +64,8 @@ export const StorySection: React.FC = () => {
               onClick={() => handleSelectScene(idx)}
               className={`min-h-[40px] px-3 sm:px-4 py-1.5 sm:py-2 rounded-full text-[10px] sm:text-xs font-mono tracking-wider transition-all duration-300 cursor-pointer active:scale-95 touch-manipulation flex items-center justify-center ${
                 activeSceneIndex === idx
-                  ? 'bg-amber-400 text-stone-950 font-bold shadow-lg shadow-amber-400/20 scale-105'
-                  : 'bg-stone-900/90 text-stone-400 hover:text-amber-200 border border-stone-800 hover:border-amber-500/40'
+                  ? 'bg-[#7A1F35] text-[#C9A45C] border border-[#C9A45C] font-bold shadow-md scale-105'
+                  : 'bg-[#FFF9F0] text-[#332629] hover:text-[#7A1F35] border border-[#C9A45C]/50 hover:border-[#C9A45C]'
               }`}
               aria-label={`Go to scene ${idx + 1}: ${scene.style}`}
             >
@@ -75,13 +75,13 @@ export const StorySection: React.FC = () => {
         </div>
 
         {/* Swipe Hint for Mobile Devices */}
-        <div className="flex items-center justify-center gap-2 text-stone-400 text-[11px] font-mono sm:hidden">
-          <MoveHorizontal className="w-3.5 h-3.5 text-amber-400 animate-pulse" />
+        <div className="flex items-center justify-center gap-2 text-[#332629]/70 text-[11px] font-mono sm:hidden">
+          <MoveHorizontal className="w-3.5 h-3.5 text-[#C9A45C] animate-pulse" />
           <span>Swipe left or right to change scenes</span>
         </div>
 
         {/* Main Morphing Transformation Card Container with Swipe Drag Support */}
-        <div className="relative bg-stone-900/70 backdrop-blur-xl border border-amber-500/30 rounded-3xl p-4 sm:p-8 md:p-10 shadow-2xl overflow-hidden select-none">
+        <div className="relative bg-[#FFF9F0] border-2 border-[#C9A45C] rounded-3xl p-4 sm:p-8 md:p-10 shadow-xl overflow-hidden select-none">
           <motion.div
             drag="x"
             dragConstraints={{ left: 0, right: 0 }}
@@ -129,39 +129,39 @@ export const StorySection: React.FC = () => {
                   className="space-y-6"
                 >
                   <div className="space-y-2">
-                    <span className="text-xs font-mono text-amber-400 tracking-[0.3em] uppercase">
+                    <span className="text-xs font-mono text-[#7A1F35] font-semibold tracking-[0.3em] uppercase">
                       {activeScene.subtitle}
                     </span>
-                    <h3 className="text-3xl sm:text-4xl font-serif font-bold text-amber-100">
+                    <h3 className="text-3xl sm:text-4xl font-serif font-bold text-[#7A1F35]">
                       {activeScene.title}
                     </h3>
-                    <span className="inline-block text-xs font-semibold px-3 py-1 rounded bg-amber-500/10 text-amber-300 border border-amber-500/20">
+                    <span className="inline-block text-xs font-semibold px-3 py-1 rounded bg-[#F8E8E5] text-[#7A1F35] border border-[#C9A45C]/40">
                       {activeScene.dateLabel}
                     </span>
                   </div>
 
-                  <p className="text-stone-300 font-serif text-base leading-relaxed">
+                  <p className="text-[#332629] font-serif text-base leading-relaxed">
                     {activeScene.description}
                   </p>
 
                   {/* Romantic Quote Card */}
-                  <div className="relative p-5 rounded-2xl bg-gradient-to-r from-stone-950 via-amber-950/20 to-stone-950 border border-amber-500/30">
-                    <Quote className="absolute top-3 left-3 w-8 h-8 text-amber-500/20" />
-                    <p className="relative z-10 font-serif italic text-amber-200 text-sm sm:text-base text-center">
-                      {activeScene.quote}
+                  <div className="relative p-5 rounded-2xl bg-[#F8E8E5]/90 border border-[#C9A45C]">
+                    <Quote className="absolute top-3 left-3 w-8 h-8 text-[#C9A45C]/30" />
+                    <p className="relative z-10 font-serif italic text-[#7A1F35] text-sm sm:text-base text-center font-medium">
+                      "{activeScene.quote}"
                     </p>
                   </div>
                 </motion.div>
               </AnimatePresence>
 
               {/* Prev / Next Navigation Controls - Touch Friendly */}
-              <div className="flex items-center justify-between pt-6 border-t border-stone-800/80">
+              <div className="flex items-center justify-between pt-6 border-t border-[#C9A45C]/30">
                 <button
                   onClick={handlePrev}
-                  className="min-h-[44px] min-w-[44px] flex items-center justify-center gap-2 text-xs font-serif font-semibold text-amber-300 hover:text-amber-100 px-5 py-2.5 rounded-full bg-stone-800 hover:bg-stone-700 active:scale-95 transition-all cursor-pointer border border-stone-700 touch-manipulation"
+                  className="min-h-[44px] min-w-[44px] flex items-center justify-center gap-2 text-xs font-serif font-semibold text-[#7A1F35] hover:text-[#63182A] px-5 py-2.5 rounded-full bg-[#FFF9F0] hover:bg-[#F8E8E5] active:scale-95 transition-all cursor-pointer border border-[#C9A45C] touch-manipulation"
                   aria-label="Previous scene"
                 >
-                  <ChevronLeft className="w-4 h-4" />
+                  <ChevronLeft className="w-4 h-4 text-[#C9A45C]" />
                   <span className="hidden sm:inline">Previous Scene</span>
                   <span className="sm:hidden">Prev</span>
                 </button>
@@ -172,7 +172,7 @@ export const StorySection: React.FC = () => {
                       key={i}
                       onClick={() => handleSelectScene(i)}
                       className={`h-2.5 rounded-full transition-all cursor-pointer min-w-[20px] min-h-[20px] flex items-center justify-center ${
-                        activeSceneIndex === i ? 'w-6 bg-amber-400' : 'w-2.5 bg-stone-700 hover:bg-stone-500'
+                        activeSceneIndex === i ? 'w-6 bg-[#7A1F35]' : 'w-2.5 bg-[#C9A45C]/40 hover:bg-[#C9A45C]'
                       }`}
                       aria-label={`Go to slide ${i + 1}`}
                     />
@@ -181,12 +181,12 @@ export const StorySection: React.FC = () => {
 
                 <button
                   onClick={handleNext}
-                  className="min-h-[44px] min-w-[44px] flex items-center justify-center gap-2 text-xs font-serif font-semibold text-stone-950 bg-amber-400 hover:bg-amber-300 active:scale-95 px-5 py-2.5 rounded-full transition-all cursor-pointer font-bold shadow-md shadow-amber-400/20 touch-manipulation"
+                  className="min-h-[44px] min-w-[44px] flex items-center justify-center gap-2 text-xs font-serif font-bold text-[#C9A45C] bg-[#7A1F35] hover:bg-[#63182A] active:scale-95 px-5 py-2.5 rounded-full transition-all cursor-pointer shadow-md touch-manipulation border border-[#C9A45C]/40"
                   aria-label="Next scene"
                 >
                   <span className="hidden sm:inline">Next Scene</span>
                   <span className="sm:hidden">Next</span>
-                  <ChevronRight className="w-4 h-4" />
+                  <ChevronRight className="w-4 h-4 text-[#C9A45C]" />
                 </button>
               </div>
             </div>

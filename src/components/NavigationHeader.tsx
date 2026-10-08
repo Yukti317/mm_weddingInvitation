@@ -31,26 +31,25 @@ export const NavigationHeader: React.FC<NavigationHeaderProps> = ({ onOpenRsvp }
     <header
       className={`fixed top-0 inset-x-0 z-40 transition-all duration-500 ${
         isScrolled
-          ? 'bg-stone-950/90 backdrop-blur-xl border-b border-amber-500/20 py-3 shadow-2xl'
+          ? 'bg-[#FFF9F0]/95 backdrop-blur-xl border-b border-[#C9A45C]/30 py-3 shadow-md'
           : 'bg-transparent py-5'
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 flex items-center justify-between">
         {/* Brand Name Logo */}
         <a href="#" className="flex items-center gap-2 group">
-         <div
-  className="w-7 h-7 xs:w-8 xs:h-8 sm:w-9 sm:h-9
-             rounded-full bg-gradient-to-tr from-amber-700 via-amber-500 to-amber-300
-             flex items-center justify-center
-             text-stone-950 font-serif font-bold
-             text-[8px] xs:text-[10px] sm:text-xs
-             tracking-tight leading-none text-center px-0.5
-             shadow-[0_2px_6px_rgba(120,53,15,0.4),inset_0_1px_1px_rgba(255,255,255,0.4)]
-             ring-1 ring-amber-200/40"
->
-  M❤️M
-</div>
-          <span className="font-serif font-bold text-lg tracking-wider text-amber-100 group-hover:text-amber-300 transition-colors">
+          <div
+            className="w-7 h-7 xs:w-8 xs:w-8 sm:w-9 sm:h-9
+              rounded-full bg-[#7A1F35] border border-[#C9A45C]
+              flex items-center justify-center
+              text-[#C9A45C] font-serif font-bold
+              text-[8px] xs:text-[10px] sm:text-xs
+              tracking-tight leading-none text-center px-0.5
+              shadow-sm"
+          >
+            M❤️M
+          </div>
+          <span className="font-serif font-bold text-lg tracking-wider text-[#7A1F35] group-hover:text-[#63182A] transition-colors">
             {BRIDE_NAME} & {GROOM_NAME}
           </span>
         </a>
@@ -61,18 +60,18 @@ export const NavigationHeader: React.FC<NavigationHeaderProps> = ({ onOpenRsvp }
             <a
               key={link.label}
               href={link.href}
-              className="text-xs font-serif tracking-widest text-stone-300 hover:text-amber-300 uppercase transition-colors"
+              className="text-xs font-serif tracking-widest text-[#332629] hover:text-[#7A1F35] uppercase font-semibold transition-colors"
             >
               {link.label}
             </a>
           ))}
         </nav>
 
-        {/* Desktop Action RSVP Button */}
+        {/* Desktop Action RSVP Button: 🍷 #7A1F35 + gold text */}
         <div className="hidden md:flex items-center gap-3">
           <button
             onClick={onOpenRsvp}
-            className="px-5 py-2 rounded-full bg-gradient-to-r from-amber-500 to-amber-700 hover:from-amber-400 hover:to-amber-600 text-stone-950 font-serif font-bold text-xs uppercase tracking-widest shadow-lg hover:shadow-amber-500/20 transition-all cursor-pointer"
+            className="px-5 py-2 rounded-full bg-[#7A1F35] hover:bg-[#63182A] text-[#C9A45C] border border-[#C9A45C]/50 font-serif font-bold text-xs uppercase tracking-widest shadow-md hover:shadow-lg transition-all cursor-pointer"
           >
             RSVP
           </button>
@@ -81,9 +80,9 @@ export const NavigationHeader: React.FC<NavigationHeaderProps> = ({ onOpenRsvp }
         {/* Mobile Menu Button */}
         <button
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-          className="md:hidden p-2 rounded-xl bg-stone-900 border border-amber-500/30 text-amber-200"
+          className="md:hidden p-2 rounded-xl bg-[#FFF9F0] border border-[#C9A45C] text-[#7A1F35]"
         >
-          {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
+          {mobileMenuOpen ? <X className="w-5 h-5 text-[#7A1F35]" /> : <Menu className="w-5 h-5 text-[#7A1F35]" />}
         </button>
       </div>
 
@@ -94,14 +93,14 @@ export const NavigationHeader: React.FC<NavigationHeaderProps> = ({ onOpenRsvp }
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
-            className="md:hidden bg-stone-950/95 border-b border-amber-500/30 backdrop-blur-2xl px-6 py-6 space-y-4"
+            className="md:hidden bg-[#FFF9F0]/98 border-b border-[#C9A45C]/30 backdrop-blur-2xl px-6 py-6 space-y-4 shadow-xl"
           >
             {navLinks.map((link) => (
               <a
                 key={link.label}
                 href={link.href}
                 onClick={() => setMobileMenuOpen(false)}
-                className="block text-sm font-serif text-amber-200 hover:text-white transition-colors"
+                className="block text-sm font-serif text-[#332629] hover:text-[#7A1F35] font-semibold transition-colors"
               >
                 {link.label}
               </a>
@@ -112,7 +111,7 @@ export const NavigationHeader: React.FC<NavigationHeaderProps> = ({ onOpenRsvp }
                 setMobileMenuOpen(false);
                 onOpenRsvp();
               }}
-              className="w-full py-3 rounded-full bg-amber-400 text-stone-950 font-serif font-bold text-xs uppercase tracking-widest"
+              className="w-full py-3 rounded-full bg-[#7A1F35] text-[#C9A45C] border border-[#C9A45C]/50 font-serif font-bold text-xs uppercase tracking-widest shadow-md"
             >
               Confirm RSVP
             </button>

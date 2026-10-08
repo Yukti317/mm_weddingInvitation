@@ -57,23 +57,23 @@ export const GallerySection: React.FC = () => {
   }, [selectedIndex]);
 
   return (
-    <section id="gallery" className="relative py-24 px-4 bg-stone-950 text-white overflow-hidden">
+    <section id="gallery" className="relative py-24 px-4 bg-[#FFF9F0] text-[#332629] overflow-hidden">
       {/* Background Lighting */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-amber-500/5 rounded-full blur-[150px] pointer-events-none" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-[#C9A45C]/10 rounded-full blur-[150px] pointer-events-none" />
 
       <div className="max-w-6xl mx-auto space-y-12 relative z-10">
         {/* Section Header */}
         <div className="text-center space-y-4 max-w-2xl mx-auto">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-stone-900 border border-amber-500/30 text-amber-300 text-xs uppercase tracking-widest font-mono">
-            <Camera className="w-3.5 h-3.5 text-amber-400" />
-            <span>Interactive Memory Wall</span>
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#FFF9F0] border border-[#C9A45C] text-[#7A1F35] text-xs uppercase tracking-widest font-mono shadow-sm">
+            <Camera className="w-3.5 h-3.5 text-[#C9A45C]" />
+            <span className="font-semibold">Interactive Memory Wall</span>
           </div>
 
-          <h2 className="text-4xl sm:text-5xl font-serif font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-amber-200 via-amber-100 to-amber-300">
+          <h2 className="text-4xl sm:text-5xl font-serif font-extrabold text-[#7A1F35]">
             Treasured Gallery
           </h2>
 
-          <p className="text-stone-300 text-sm sm:text-base font-serif italic">
+          <p className="text-[#332629] text-sm sm:text-base font-serif italic">
             "Floating Polaroids, film strips, magazine spreads, and artistic frames of our love."
           </p>
         </div>
@@ -98,9 +98,9 @@ export const GallerySection: React.FC = () => {
                 />
 
                 {/* Always-visible subtle touch badge on mobile & hover overlay on desktop */}
-                <div className="absolute top-3 right-3 sm:inset-0 bg-stone-950/70 sm:bg-stone-950/50 sm:opacity-0 group-hover:opacity-100 transition-opacity rounded-xl sm:rounded-2xl flex items-center justify-center gap-2 px-3 py-1.5 sm:px-0 sm:py-0 text-amber-200 font-serif font-bold text-xs sm:text-sm backdrop-blur-md sm:backdrop-blur-sm border border-amber-500/30 sm:border-0 shadow-lg">
-                  <ZoomIn className="w-4 h-4 sm:w-5 sm:h-5 text-amber-400" />
-                  <span className="sm:inline">View Details</span>
+                <div className="absolute top-3 right-3 sm:inset-0 bg-[#FFF9F0]/90 sm:bg-[#FFF9F0]/85 sm:opacity-0 group-hover:opacity-100 transition-opacity rounded-xl sm:rounded-2xl flex items-center justify-center gap-2 px-3 py-1.5 sm:px-0 sm:py-0 text-[#7A1F35] font-serif font-bold text-xs sm:text-sm backdrop-blur-md border border-[#C9A45C] shadow-md">
+                  <ZoomIn className="w-4 h-4 sm:w-5 sm:h-5 text-[#C9A45C]" />
+                  <span className="sm:inline font-semibold">View Details</span>
                 </div>
               </div>
             </motion.div>
@@ -112,14 +112,14 @@ export const GallerySection: React.FC = () => {
       <AnimatePresence>
         {selectedItem && selectedIndex !== null && (
           <div 
-            className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-5 md:p-8 bg-stone-950/94 backdrop-blur-lg overflow-y-auto overflow-x-hidden"
+            className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-5 md:p-8 bg-black/60 backdrop-blur-md overflow-y-auto overflow-x-hidden"
             role="dialog"
             aria-modal="true"
             aria-label="Photo Gallery Lightbox"
           >
             {/* Backdrop click to close */}
             <div 
-              className="fixed inset-0 bg-black/60"
+              className="fixed inset-0"
               onClick={handleCloseModal} 
               aria-label="Close modal overlay"
             />
@@ -129,29 +129,29 @@ export const GallerySection: React.FC = () => {
               animate={{ opacity: 1, scale: 1, y: 0 }}
               exit={{ opacity: 0, scale: 0.95, y: 15 }}
               transition={{ duration: 0.25, ease: 'easeOut' }}
-              className="relative z-10 w-full max-w-[min(94vw,520px)] bg-stone-950/90 border border-amber-500/30 rounded-3xl p-4 sm:p-6 md:p-8 text-white shadow-[0_0_50px_rgba(0,0,0,0.8)] overflow-y-auto max-h-[92vh] overflow-x-hidden space-y-4 sm:space-y-6 select-none my-auto"
+              className="relative z-10 w-full max-w-[min(94vw,520px)] bg-[#FFF9F0] border-2 border-[#C9A45C] rounded-3xl p-4 sm:p-6 md:p-8 text-[#332629] shadow-2xl overflow-y-auto max-h-[92vh] overflow-x-hidden space-y-4 sm:space-y-6 select-none my-auto"
             >
               {/* Close Button - Touch Target >= 44px */}
               <button
                 onClick={handleCloseModal}
-                className="absolute top-3 right-3 sm:top-4 sm:right-4 z-40 min-w-[44px] min-h-[44px] p-2.5 rounded-full bg-stone-900/90 hover:bg-stone-800 active:scale-95 text-amber-200 transition-all flex items-center justify-center border border-amber-500/30 touch-manipulation cursor-pointer shadow-lg"
+                className="absolute top-3 right-3 sm:top-4 sm:right-4 z-40 min-w-[44px] min-h-[44px] p-2.5 rounded-full bg-[#7A1F35] hover:bg-[#63182A] active:scale-95 text-[#C9A45C] transition-all flex items-center justify-center border border-[#C9A45C]/40 touch-manipulation cursor-pointer shadow-md"
                 aria-label="Close modal"
               >
                 <X className="w-5 h-5" />
               </button>
 
               {/* Mobile Swipe Hint */}
-              <div className="flex items-center justify-center gap-2 text-stone-400 text-[11px] sm:text-xs font-mono pt-1 sm:hidden">
-                <MoveHorizontal className="w-3.5 h-3.5 text-amber-400 animate-pulse" />
+              <div className="flex items-center justify-center gap-2 text-[#332629]/70 text-[11px] sm:text-xs font-mono pt-1 sm:hidden">
+                <MoveHorizontal className="w-3.5 h-3.5 text-[#C9A45C] animate-pulse" />
                 <span>Swipe left/right to browse gallery</span>
               </div>
 
               {/* Lightbox Photo View Container with Responsive Floating Nav Arrows */}
               <div className="relative flex items-center justify-center w-full max-w-[320px] xs:max-w-[360px] sm:max-w-[420px] mx-auto py-1 sm:py-2">
-                {/* Floating Previous Arrow Button - Safely placed at edges with >=44px target */}
+                {/* Floating Previous Arrow Button */}
                 <button
                   onClick={(e) => { e.stopPropagation(); handlePrevPhoto(); }}
-                  className="absolute -left-1 sm:-left-5 md:-left-7 z-30 min-w-[44px] min-h-[44px] w-11 h-11 sm:w-12 sm:h-12 rounded-full bg-stone-950/90 hover:bg-stone-900 active:scale-90 text-amber-400 border border-amber-500/60 shadow-[0_0_20px_rgba(0,0,0,0.8)] flex items-center justify-center touch-manipulation cursor-pointer backdrop-blur-md transition-all group hover:border-amber-400 shrink-0"
+                  className="absolute -left-1 sm:-left-5 md:-left-7 z-30 min-w-[44px] min-h-[44px] w-11 h-11 sm:w-12 sm:h-12 rounded-full bg-[#7A1F35] hover:bg-[#63182A] active:scale-90 text-[#C9A45C] border border-[#C9A45C] shadow-md flex items-center justify-center touch-manipulation cursor-pointer transition-all group shrink-0"
                   aria-label="Previous image"
                 >
                   <ChevronLeft className="w-6 h-6 group-hover:-translate-x-0.5 transition-transform" />
@@ -188,10 +188,10 @@ export const GallerySection: React.FC = () => {
                   </AnimatePresence>
                 </motion.div>
 
-                {/* Floating Next Arrow Button - Safely placed at edges with >=44px target */}
+                {/* Floating Next Arrow Button */}
                 <button
                   onClick={(e) => { e.stopPropagation(); handleNextPhoto(); }}
-                  className="absolute -right-1 sm:-right-5 md:-right-7 z-30 min-w-[44px] min-h-[44px] w-11 h-11 sm:w-12 sm:h-12 rounded-full bg-stone-950/90 hover:bg-stone-900 active:scale-90 text-amber-400 border border-amber-500/60 shadow-[0_0_20px_rgba(0,0,0,0.8)] flex items-center justify-center touch-manipulation cursor-pointer backdrop-blur-md transition-all group hover:border-amber-400 shrink-0"
+                  className="absolute -right-1 sm:-right-5 md:-right-7 z-30 min-w-[44px] min-h-[44px] w-11 h-11 sm:w-12 sm:h-12 rounded-full bg-[#7A1F35] hover:bg-[#63182A] active:scale-90 text-[#C9A45C] border border-[#C9A45C] shadow-md flex items-center justify-center touch-manipulation cursor-pointer transition-all group shrink-0"
                   aria-label="Next image"
                 >
                   <ChevronRight className="w-6 h-6 group-hover:translate-x-0.5 transition-transform" />
@@ -199,32 +199,32 @@ export const GallerySection: React.FC = () => {
               </div>
 
               {/* Photo Metadata Details */}
-              <div className="space-y-3 text-center border-t border-stone-800/80 pt-4 px-1">
-                <div className="flex items-center justify-between text-xs sm:text-sm font-mono text-stone-400">
+              <div className="space-y-3 text-center border-t border-[#C9A45C]/30 pt-4 px-1">
+                <div className="flex items-center justify-between text-xs sm:text-sm font-mono text-[#332629]">
                   <span>Photo {selectedIndex + 1} of {GALLERY_ITEMS.length}</span>
-                  <span className="text-amber-400 font-bold uppercase tracking-wider text-[11px] sm:text-xs">{selectedItem.style}</span>
+                  <span className="text-[#7A1F35] font-bold uppercase tracking-wider text-[11px] sm:text-xs">{selectedItem.style}</span>
                 </div>
 
-                <h3 className="text-xl sm:text-2xl font-serif font-bold text-amber-200 break-words leading-tight">
+                <h3 className="text-xl sm:text-2xl font-serif font-bold text-[#7A1F35] break-words leading-tight">
                   {selectedItem.title}
                 </h3>
-                <p className="text-xs sm:text-sm text-stone-300 font-serif italic max-w-md mx-auto">
+                <p className="text-xs sm:text-sm text-[#332629] font-serif italic max-w-md mx-auto">
                   "{selectedItem.caption}"
                 </p>
 
-                <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-4 text-xs font-mono text-amber-400/80 pt-1">
+                <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-4 text-xs font-mono text-[#7A1F35] pt-1 font-semibold">
                   <span className="flex items-center gap-1">
-                    <MapPin className="w-3.5 h-3.5 shrink-0" />
+                    <MapPin className="w-3.5 h-3.5 text-[#C9A45C] shrink-0" />
                     <span>{selectedItem.location}</span>
                   </span>
                   <span className="hidden xs:inline">•</span>
                   <span className="flex items-center gap-1">
-                    <Calendar className="w-3.5 h-3.5 shrink-0" />
+                    <Calendar className="w-3.5 h-3.5 text-[#C9A45C] shrink-0" />
                     <span>{selectedItem.date}</span>
                   </span>
                 </div>
 
-                {/* Quick Dots Pagination with >=44px touch targets */}
+                {/* Quick Dots Pagination */}
                 <div className="flex items-center justify-center gap-1 pt-2">
                   {GALLERY_ITEMS.map((_, i) => (
                     <button
@@ -234,7 +234,7 @@ export const GallerySection: React.FC = () => {
                       aria-label={`Go to photo ${i + 1}`}
                     >
                       <span className={`h-2 rounded-full transition-all ${
-                        selectedIndex === i ? 'w-6 bg-amber-400' : 'w-2 bg-stone-700 hover:bg-stone-500'
+                        selectedIndex === i ? 'w-6 bg-[#7A1F35]' : 'w-2 bg-[#C9A45C]/40 hover:bg-[#C9A45C]'
                       }`} />
                     </button>
                   ))}

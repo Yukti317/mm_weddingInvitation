@@ -29,7 +29,18 @@ export interface StoryScene {
 export interface GalleryItem {
   id: string;
   title: string;
-  category: 'Polaroid' | 'Film Strip' | 'Scrapbook' | 'Magazine' | 'Watercolor' | 'Glass Card' | 'Pencil Sketch' | 'Minimal Line Art';
+  category:
+    | 'Polaroid'
+    | 'Film Strip'
+    | 'Scrapbook'
+    | 'Magazine'
+    | 'Magazine Cover'
+    | 'Watercolor'
+    | 'Glass Card'
+    | 'Pencil Sketch'
+    | 'Minimal Line Art'
+    | 'Vintage Portrait'
+    | 'Black & White';
   style: 'watercolor' | 'magazine' | 'polaroid' | 'scrapbook' | 'sketch' | 'lineart' | 'framed';
   caption: string;
   location: string;

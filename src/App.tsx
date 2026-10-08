@@ -48,7 +48,7 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen bg-stone-950 text-stone-100 font-sans selection:bg-amber-500 selection:text-stone-950 overflow-x-hidden">
+    <div className="min-h-screen bg-[#FFF9F0] text-[#332629] font-sans selection:bg-[#7A1F35] selection:text-[#FFF9F0] overflow-x-hidden">
       {/* 1. Opening 3D Wax Seal Envelope Experience */}
       {!hasOpenedEnvelope && (
         <OpeningEnvelope onOpened={() => setHasOpenedEnvelope(true)} />

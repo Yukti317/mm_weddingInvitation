@@ -38,6 +38,7 @@ interface PhotoTransformerProps {
   subCaption?: string;
   className?: string;
   interactive?: boolean;
+  image?: string;
 }
 
 export const PhotoTransformer: React.FC<PhotoTransformerProps> = ({
@@ -49,7 +50,7 @@ export const PhotoTransformer: React.FC<PhotoTransformerProps> = ({
   image, // Optional image prop for custom image input
 }) => {
   const [isHovered, setIsHovered] = useState(false);
-const selectedImage = STYLE_IMAGES[style];
+  const selectedImage = image || STYLE_IMAGES[style];
 
   // Map each artistic style to one of the 5 uploaded couple photos
   const getPhotoForStyle = (s: ArtisticStyle) => {
@@ -363,40 +364,38 @@ const selectedImage = STYLE_IMAGES[style];
 
       {/* STYLE 7: VECTOR ILLUSTRATION */}
       {style === 'vector' && (
-        <div className="relative p-5 bg-gradient-to-br from-[#4a0404] via-[#700310] to-[#2d0206] rounded-3xl shadow-2xl border-2 border-amber-400/80 overflow-hidden text-white group">
+        <div className="relative p-5 bg-gradient-to-br from-[#7A1F35] via-[#5C1425] to-[#3B0A16] rounded-3xl shadow-2xl border-2 border-[#C9A45C] overflow-hidden text-white group">
           {/* Ornate Royal Corner Accents */}
-          <div className="absolute top-3 left-3 w-6 h-6 border-t-2 border-l-2 border-amber-300 z-20 pointer-events-none" />
-          <div className="absolute top-3 right-3 w-6 h-6 border-t-2 border-r-2 border-amber-300 z-20 pointer-events-none" />
-          <div className="absolute bottom-3 left-3 w-6 h-6 border-b-2 border-l-2 border-amber-300 z-20 pointer-events-none" />
-          <div className="absolute bottom-3 right-3 w-6 h-6 border-b-2 border-r-2 border-amber-300 z-20 pointer-events-none" />
+          <div className="absolute top-3 left-3 w-6 h-6 border-t-2 border-l-2 border-[#C9A45C] z-20 pointer-events-none" />
+          <div className="absolute top-3 right-3 w-6 h-6 border-t-2 border-r-2 border-[#C9A45C] z-20 pointer-events-none" />
+          <div className="absolute bottom-3 left-3 w-6 h-6 border-b-2 border-l-2 border-[#C9A45C] z-20 pointer-events-none" />
+          <div className="absolute bottom-3 right-3 w-6 h-6 border-b-2 border-r-2 border-[#C9A45C] z-20 pointer-events-none" />
 
           {/* Top Royal Vector Badge */}
-          <div className="absolute top-4 left-4 z-20 bg-[#4a0404]/90 backdrop-blur-md border border-amber-400/60 px-3 py-1 rounded-full flex items-center gap-1.5 text-[10px] font-mono text-amber-200 shadow-xl">
-            <Sparkles className="w-3 h-3 text-amber-400 animate-spin" />
+          <div className="absolute top-4 left-4 z-20 bg-[#7A1F35]/90 backdrop-blur-md border border-[#C9A45C]/60 px-3 py-1 rounded-full flex items-center gap-1.5 text-[10px] font-mono text-[#C9A45C] shadow-xl">
+            <Sparkles className="w-3 h-3 text-[#C9A45C] animate-spin" />
             <span className="tracking-widest uppercase">Digital Vector Illustrator</span>
           </div>
 
-          <div className="relative aspect-[3/4] rounded-2xl overflow-hidden bg-stone-900 border border-amber-500/40">
-            {/* Real Couple Photo with Vector Illustrator Filter */}
-            {/* <img src={img1}/> */}
+          <div className="relative aspect-[3/4] rounded-2xl overflow-hidden bg-stone-900 border border-[#C9A45C]/40">
             <div
               className="w-full h-full bg-cover bg-center transition-transform duration-700 group-hover:scale-105"
               style={{
                 backgroundImage: `url('${selectedImage}')`,
-                filter: 'saturate(1.3) contrast(1.18) brightness(1.04)',
+                filter: 'saturate(1.25) contrast(1.15) brightness(1.03)',
               }}
             />
             {/* Royal Maroon Gradient Vignette */}
-            <div className="absolute inset-0 bg-gradient-to-t from-[#4a0404] via-[#4a0404]/30 to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-t from-[#7A1F35] via-[#7A1F35]/30 to-transparent" />
 
             <div className="absolute bottom-4 inset-x-4 text-center text-white">
-              <span className="text-[10px] uppercase tracking-[0.3em] text-amber-300 font-mono">
+              <span className="text-[10px] uppercase tracking-[0.3em] text-[#C9A45C] font-mono">
                 Mihir ❤️ Mukti
               </span>
-              <h3 className="text-2xl font-serif font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-amber-200 via-amber-100 to-amber-300 drop-shadow-lg">
+              <h3 className="text-2xl font-serif font-extrabold text-[#FFF9F0] drop-shadow-lg">
                 {caption || 'Mukti & Mihir'}
               </h3>
-              <p className="text-[11px] font-serif italic text-amber-200/90 mt-0.5">
+              <p className="text-[11px] font-serif italic text-[#FFF9F0]/90 mt-0.5">
                 {subCaption || 'Walking Hand in Hand Into Our Forever'}
               </p>
             </div>
@@ -406,8 +405,8 @@ const selectedImage = STYLE_IMAGES[style];
 
       {/* STYLE 8: ROYAL FRAMED ARTWORK */}
       {style === 'framed' && (
-        <div className="relative p-6 bg-gradient-to-br from-amber-900 via-amber-800 to-amber-950 rounded-2xl shadow-2xl border-4 border-amber-400/80">
-          <div className="p-3 bg-rose-950 rounded-lg shadow-inner border border-amber-500/40">
+        <div className="relative p-6 bg-gradient-to-br from-[#7A1F35] via-[#5C1425] to-[#3B0A16] rounded-2xl shadow-2xl border-4 border-[#C9A45C]">
+          <div className="p-3 bg-[#3B0A16] rounded-lg shadow-inner border border-[#C9A45C]/40">
             <div className="relative aspect-[3/4] rounded overflow-hidden">
               <div
                 className="w-full h-full bg-cover bg-center transition-transform duration-700 group-hover:scale-105"
@@ -416,12 +415,12 @@ const selectedImage = STYLE_IMAGES[style];
                   filter: 'contrast(1.1) saturate(1.2)',
                 }}
               />
-              <div className="absolute inset-0 border-[6px] border-amber-400/30 rounded pointer-events-none" />
+              <div className="absolute inset-0 border-[6px] border-[#C9A45C]/40 rounded pointer-events-none" />
             </div>
           </div>
-          <div className="mt-3 text-center text-amber-100">
-            <h4 className="font-serif font-bold text-lg text-amber-200">{caption || 'Royal Portrait'}</h4>
-            <p className="text-xs text-amber-300/80">{subCaption || 'The Grand Celebration'}</p>
+          <div className="mt-3 text-center text-[#FFF9F0]">
+            <h4 className="font-serif font-bold text-lg text-[#C9A45C]">{caption || 'Royal Portrait'}</h4>
+            <p className="text-xs text-[#FFF9F0]/90">{subCaption || 'The Grand Celebration'}</p>
           </div>
         </div>
       )}

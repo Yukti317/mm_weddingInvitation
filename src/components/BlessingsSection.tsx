@@ -96,7 +96,7 @@ const TypedLine: React.FC<{ text: string; start: boolean; speed?: number }> = ({
     <span>
       {displayed}
       {start && displayed.length < text.length && (
-        <span className="inline-block w-[2px] h-[1em] bg-amber-300 ml-0.5 align-middle animate-pulse" />
+        <span className="inline-block w-[2px] h-[1em] bg-[#7A1F35] ml-0.5 align-middle animate-pulse" />
       )}
     </span>
   );
@@ -119,8 +119,8 @@ const FamilyRow: React.FC<{ member: FamilyMember; index: number }> = ({ member, 
     >
       {/* Photo */}
       <div className="relative shrink-0">
-        <div className="absolute -inset-3 rounded-full bg-amber-500/20 blur-xl" />
-        <div className="relative w-32 h-32 sm:w-44 sm:h-44 aspect-square rounded-full border-2 border-amber-400/60 shadow-2xl bg-stone-900 overflow-hidden">
+        <div className="absolute -inset-3 rounded-full bg-[#C9A45C]/20 blur-xl" />
+        <div className="relative w-32 h-32 sm:w-44 sm:h-44 aspect-square rounded-full border-4 border-[#C9A45C] shadow-xl bg-[#FFF9F0] overflow-hidden">
           <img
             src={member.image}
             alt={member.name}
@@ -133,23 +133,23 @@ const FamilyRow: React.FC<{ member: FamilyMember; index: number }> = ({ member, 
       {/* Announcer text block */}
       <div className={`space-y-2 text-center sm:text-left ${fromLeft ? '' : 'sm:text-right'}`}>
         <div
-          className={`inline-flex items-center gap-2 text-[10px] sm:text-xs font-mono uppercase tracking-[0.2em] text-amber-400/80 ${
+          className={`inline-flex items-center gap-2 text-[10px] sm:text-xs font-mono uppercase tracking-[0.2em] text-[#7A1F35] font-semibold ${
             fromLeft ? '' : 'sm:flex-row-reverse'
           }`}
         >
-          <Mic2 className="w-3 h-3" />
+          <Mic2 className="w-3.5 h-3.5 text-[#C9A45C]" />
           <span>Please welcome</span>
         </div>
 
-        <h3 className="font-serif font-extrabold text-2xl sm:text-3xl text-amber-100">
+        <h3 className="font-serif font-extrabold text-2xl sm:text-3xl text-[#7A1F35]">
           {member.name}
         </h3>
 
-        <p className="text-[11px] sm:text-xs font-mono uppercase tracking-widest text-amber-300/70">
+        <p className="text-[11px] sm:text-xs font-mono uppercase tracking-widest text-[#7A1F35]/80 font-semibold">
           {member.relation}
         </p>
 
-        <p className="text-stone-300 font-serif italic text-sm sm:text-base leading-relaxed max-w-md min-h-[3em]">
+        <p className="text-[#332629] font-serif italic text-sm sm:text-base leading-relaxed max-w-md min-h-[3em]">
           <TypedLine text={member.intro} start={typing} />
         </p>
       </div>
@@ -163,14 +163,14 @@ export const BrideFamilySection: React.FC = () => {
   return (
     <section
       id="bride-family"
-      className="relative py-24 px-4 bg-stone-950 text-white overflow-hidden border-t border-amber-500/20"
+      className="relative py-24 px-4 bg-[#F8E8E5] text-[#332629] overflow-hidden border-t border-[#C9A45C]/30"
     >
       {/* Ambient particles */}
       <div className="absolute inset-0 pointer-events-none">
         {Array.from({ length: 30 }).map((_, i) => (
           <div
             key={i}
-            className="absolute rounded-full bg-amber-100/30"
+            className="absolute rounded-full bg-[#C9A45C]/30"
             style={{
               width: `${1 + (i % 3)}px`,
               height: `${1 + (i % 3)}px`,
@@ -192,16 +192,16 @@ export const BrideFamilySection: React.FC = () => {
           transition={{ duration: 0.6 }}
           className="text-center space-y-4 max-w-xl mx-auto"
         >
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-stone-900 border border-amber-500/30 text-amber-300 text-xs uppercase tracking-widest font-mono">
-            <Sparkles className="w-3.5 h-3.5 text-amber-400" />
-            <span>Meet the Family</span>
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#FFF9F0] border border-[#C9A45C] text-[#7A1F35] text-xs uppercase tracking-widest font-mono shadow-sm">
+            <Sparkles className="w-3.5 h-3.5 text-[#C9A45C]" />
+            <span className="font-semibold">Meet the Family</span>
           </div>
 
-          <h2 className="text-4xl sm:text-5xl font-serif font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-amber-200 via-amber-100 to-amber-300">
+          <h2 className="text-4xl sm:text-5xl font-serif font-extrabold text-[#7A1F35]">
             Before the Big Day
           </h2>
 
-          <p className="text-stone-300 text-sm sm:text-base font-serif italic min-h-[2.5em]">
+          <p className="text-[#332629] text-sm sm:text-base font-serif italic min-h-[2.5em]">
             <TypedLine
               text={`Allow us to introduce the people who raised ${BRIDE_NAME}...`}
               start={introTyping}

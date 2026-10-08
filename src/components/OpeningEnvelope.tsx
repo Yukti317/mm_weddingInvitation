@@ -38,10 +38,10 @@ export const OpeningEnvelope: React.FC<OpeningEnvelopeProps> = ({ onOpened }) =>
   };
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center bg-gradient-to-b from-stone-950 via-neutral-900 to-stone-950 p-4 overflow-hidden select-none">
-      {/* Background Starry Night Sky with Floating Flowers */}
+    <div className="fixed inset-0 z-50 flex items-center justify-center bg-gradient-to-b from-[#2A0C14] via-[#42121E] to-[#2A0C14] p-4 overflow-hidden select-none">
+      {/* Background Starry Night Sky with Floating Gold & Blush Sparkles */}
       <div className="absolute inset-0 opacity-40 pointer-events-none">
-        <div className="absolute inset-0 bg-[radial-gradient(#fde047_1px,transparent_1px)] [background-size:32px_32px]" />
+        <div className="absolute inset-0 bg-[radial-gradient(#C9A45C_1px,transparent_1px)] [background-size:32px_32px]" />
         {[...Array(20)].map((_, i) => (
           <motion.div
             key={i}
@@ -59,7 +59,7 @@ export const OpeningEnvelope: React.FC<OpeningEnvelopeProps> = ({ onOpened }) =>
               repeat: Infinity,
               delay: Math.random() * 2,
             }}
-            className="absolute w-1.5 h-1.5 bg-amber-200 rounded-full blur-[1px]"
+            className="absolute w-1.5 h-1.5 bg-[#C9A45C] rounded-full blur-[1px]"
           />
         ))}
       </div>
@@ -73,41 +73,41 @@ export const OpeningEnvelope: React.FC<OpeningEnvelopeProps> = ({ onOpened }) =>
               animate={{ scale: 1, opacity: 1, y: 0 }}
               exit={{ opacity: 0, scale: 1.1, y: -100 }}
               transition={{ duration: 0.8, type: 'spring' }}
-              className="relative w-full bg-[#fdfbf7] rounded-2xl shadow-2xl border-2 border-amber-300/80 p-5 sm:p-8 text-stone-900 overflow-hidden cursor-pointer group touch-manipulation active:scale-[0.99]"
+              className="relative w-full bg-[#FFF9F0] rounded-2xl shadow-2xl border-2 border-[#C9A45C] p-5 sm:p-8 text-[#332629] overflow-hidden cursor-pointer group touch-manipulation active:scale-[0.99]"
               onClick={handleOpenEnvelope}
             >
               {/* Envelope Flap Accent */}
-              <div className="absolute top-0 inset-x-0 h-28 sm:h-32 bg-gradient-to-b from-amber-100/80 via-[#f7f3e9] to-transparent clip-path-triangle border-b border-amber-300/40" />
+              <div className="absolute top-0 inset-x-0 h-28 sm:h-32 bg-gradient-to-b from-[#F8E8E5] via-[#FFF9F0] to-transparent clip-path-triangle border-b border-[#C9A45C]/40" />
 
               {/* Envelope Texture Lines */}
-              <div className="absolute inset-0 bg-[radial-gradient(#d4af37_1px,transparent_1px)] [background-size:20px_20px] opacity-10 pointer-events-none" />
+              <div className="absolute inset-0 bg-[radial-gradient(#C9A45C_1px,transparent_1px)] [background-size:20px_20px] opacity-10 pointer-events-none" />
 
               <div className="relative z-10 flex flex-col items-center justify-center min-h-[280px] sm:min-h-[320px] text-center space-y-4 sm:space-y-6">
-                <p className="text-[10px] sm:text-xs uppercase tracking-[0.3em] sm:tracking-[0.4em] font-serif text-amber-800/80">
+                <p className="text-[10px] sm:text-xs uppercase tracking-[0.3em] sm:tracking-[0.4em] font-serif text-[#7A1F35] font-semibold">
                   Wedding Invitation
                 </p>
 
                 {/* Wax Seal */}
                 <div className="relative my-2 sm:my-4">
                   {/* Outer Glow */}
-                  <div className="absolute -inset-4 rounded-full bg-amber-400/20 blur-md group-hover:bg-amber-400/40 transition-all" />
+                  <div className="absolute -inset-4 rounded-full bg-[#C9A45C]/30 blur-md group-hover:bg-[#C9A45C]/50 transition-all" />
 
-                  {/* Golden Wax Seal Badge */}
+                  {/* Royal Burgundy Wax Seal Badge with Gold Border */}
                   <motion.div
                     animate={sealBroken ? { scale: [1, 1.2, 0], rotate: [0, 15, 90] } : { scale: 1 }}
                     transition={{ duration: 0.6 }}
-                    className="relative w-20 h-20 sm:w-24 sm:h-24 rounded-full bg-gradient-to-br from-amber-600 via-amber-700 to-amber-900 border-4 border-amber-300 shadow-2xl flex items-center justify-center text-amber-100 font-serif font-bold text-xl sm:text-2xl tracking-wider cursor-pointer transform group-hover:scale-105 transition-transform"
+                    className="relative w-20 h-20 sm:w-24 sm:h-24 rounded-full bg-[#7A1F35] border-4 border-[#C9A45C] shadow-2xl flex items-center justify-center text-[#C9A45C] font-serif font-bold text-xl sm:text-2xl tracking-wider cursor-pointer transform group-hover:scale-105 transition-transform"
                   >
-                    <div className="absolute inset-1 rounded-full border border-amber-400/50" />
+                    <div className="absolute inset-1 rounded-full border border-[#C9A45C]/50" />
                     <span className="drop-shadow-md">M ❤️ M</span>
                   </motion.div>
                 </div>
 
                 <div className="space-y-1">
-                  <h3 className="font-serif text-2xl sm:text-3xl font-extrabold text-stone-900">
+                  <h3 className="font-serif text-2xl sm:text-3xl font-extrabold text-[#7A1F35]">
                     Mukti & Mihir
                   </h3>
-                  <p className="text-[11px] sm:text-xs text-amber-900/80 font-serif italic">
+                  <p className="text-[11px] sm:text-xs text-[#332629]/80 font-serif italic">
                     Tap the Golden Wax Seal to Open
                   </p>
                 </div>
@@ -115,9 +115,9 @@ export const OpeningEnvelope: React.FC<OpeningEnvelopeProps> = ({ onOpened }) =>
                 <motion.div
                   animate={{ y: [0, 6, 0] }}
                   transition={{ repeat: Infinity, duration: 1.5 }}
-                  className="flex items-center gap-1 text-[11px] sm:text-xs text-amber-700 font-medium pt-1 sm:pt-2"
+                  className="flex items-center gap-1 text-[11px] sm:text-xs text-[#7A1F35] font-medium pt-1 sm:pt-2"
                 >
-                  <Sparkles className="w-3.5 h-3.5 text-amber-500" />
+                  <Sparkles className="w-3.5 h-3.5 text-[#C9A45C]" />
                   <span>Tap anywhere to begin experience</span>
                 </motion.div>
               </div>
@@ -132,13 +132,13 @@ export const OpeningEnvelope: React.FC<OpeningEnvelopeProps> = ({ onOpened }) =>
               initial={{ opacity: 0, scale: 0.9, y: 40 }}
               animate={{ opacity: 1, scale: 1, y: 0 }}
               transition={{ duration: 1, type: 'spring' }}
-              className="relative w-full max-h-[88vh] overflow-y-auto bg-gradient-to-b from-[#fffdfa] via-[#f7f2e6] to-[#f5eee0] rounded-3xl p-6 sm:p-8 md:p-12 shadow-2xl border-2 border-amber-400/70 text-stone-900 text-center space-y-5 sm:space-y-6"
+              className="relative w-full max-h-[88vh] overflow-y-auto bg-gradient-to-b from-[#FFF9F0] via-[#F8E8E5]/50 to-[#FFF9F0] rounded-3xl p-6 sm:p-8 md:p-12 shadow-2xl border-2 border-[#C9A45C] text-[#332629] text-center space-y-5 sm:space-y-6"
             >
               {/* Ornate Gold Border Corners */}
-              <div className="absolute top-3 left-3 sm:top-4 sm:left-4 w-6 h-6 sm:w-8 sm:h-8 border-t-2 border-l-2 border-amber-500" />
-              <div className="absolute top-3 right-3 sm:top-4 sm:right-4 w-6 h-6 sm:w-8 sm:h-8 border-t-2 border-r-2 border-amber-500" />
-              <div className="absolute bottom-3 left-3 sm:bottom-4 sm:left-4 w-6 h-6 sm:w-8 sm:h-8 border-b-2 border-l-2 border-amber-500" />
-              <div className="absolute bottom-3 right-3 sm:bottom-4 sm:right-4 w-6 h-6 sm:w-8 sm:h-8 border-b-2 border-r-2 border-amber-500" />
+              <div className="absolute top-3 left-3 sm:top-4 sm:left-4 w-6 h-6 sm:w-8 sm:h-8 border-t-2 border-l-2 border-[#C9A45C]" />
+              <div className="absolute top-3 right-3 sm:top-4 sm:right-4 w-6 h-6 sm:w-8 sm:h-8 border-t-2 border-r-2 border-[#C9A45C]" />
+              <div className="absolute bottom-3 left-3 sm:bottom-4 sm:left-4 w-6 h-6 sm:w-8 sm:h-8 border-b-2 border-l-2 border-[#C9A45C]" />
+              <div className="absolute bottom-3 right-3 sm:bottom-4 sm:right-4 w-6 h-6 sm:w-8 sm:h-8 border-b-2 border-r-2 border-[#C9A45C]" />
 
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
@@ -146,10 +146,10 @@ export const OpeningEnvelope: React.FC<OpeningEnvelopeProps> = ({ onOpened }) =>
                 transition={{ delay: 0.3 }}
                 className="space-y-2 pt-2"
               >
-                <p className="text-[10px] sm:text-xs font-serif uppercase tracking-[0.25em] sm:tracking-[0.3em] text-amber-800">
+                <p className="text-[10px] sm:text-xs font-serif uppercase tracking-[0.25em] sm:tracking-[0.3em] text-[#7A1F35] font-semibold">
                   Together with their families
                 </p>
-                <h1 className="text-3xl sm:text-4xl md:text-5xl font-serif font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-amber-900 via-amber-800 to-stone-900 drop-shadow-sm">
+                <h1 className="text-3xl sm:text-4xl md:text-5xl font-serif font-extrabold text-[#7A1F35] drop-shadow-sm">
                   Mukti ❤️ Mihir
                 </h1>
               </motion.div>
@@ -158,12 +158,12 @@ export const OpeningEnvelope: React.FC<OpeningEnvelopeProps> = ({ onOpened }) =>
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.8 }}
-                className="space-y-2 sm:space-y-3 font-serif py-3 sm:py-4 border-y border-amber-300/40"
+                className="space-y-2 sm:space-y-3 font-serif py-3 sm:py-4 border-y border-[#C9A45C]/40"
               >
-                <p className="text-xs sm:text-sm md:text-base text-stone-700 italic">
+                <p className="text-xs sm:text-sm md:text-base text-[#332629] italic">
                   Request the honour of your presence
                 </p>
-                <p className="text-[10px] sm:text-xs uppercase tracking-widest text-amber-900 font-semibold">
+                <p className="text-[10px] sm:text-xs uppercase tracking-widest text-[#7A1F35] font-semibold">
                   To celebrate the beginning of their forever
                 </p>
               </motion.div>
@@ -172,7 +172,7 @@ export const OpeningEnvelope: React.FC<OpeningEnvelopeProps> = ({ onOpened }) =>
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ delay: 1.3 }}
-                className="inline-block bg-gradient-to-r from-amber-700 via-amber-800 to-stone-900 text-amber-100 px-5 sm:px-6 py-2 sm:py-2.5 rounded-full shadow-lg font-serif font-bold text-base sm:text-lg tracking-wider"
+                className="inline-block bg-[#7A1F35] text-[#C9A45C] border border-[#C9A45C]/50 px-5 sm:px-6 py-2 sm:py-2.5 rounded-full shadow-lg font-serif font-bold text-base sm:text-lg tracking-wider"
               >
                 25 & 26 November 2026
               </motion.div>
@@ -181,7 +181,7 @@ export const OpeningEnvelope: React.FC<OpeningEnvelopeProps> = ({ onOpened }) =>
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 1.8 }}
-                className="text-[11px] sm:text-xs font-mono text-amber-800/80 animate-pulse pt-1"
+                className="text-[11px] sm:text-xs font-mono text-[#7A1F35] animate-pulse pt-1"
               >
                 Entering Experience...
               </motion.p>

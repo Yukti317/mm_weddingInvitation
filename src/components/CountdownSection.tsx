@@ -36,28 +36,28 @@ export const CountdownSection: React.FC = () => {
   }, []);
 
   return (
-    <section className="relative py-20 px-4 bg-gradient-to-b from-stone-950 via-neutral-900 to-stone-950 text-white overflow-hidden border-t border-b border-amber-500/20">
+    <section className="relative py-20 px-4 bg-[#F8E8E5] text-[#332629] overflow-hidden border-t border-b border-[#C9A45C]/30">
       {/* Blooming Flower Background Ornaments */}
-      <div className="absolute top-1/2 left-10 -translate-y-1/2 text-rose-500/10 pointer-events-none animate-spin-slow">
+      <div className="absolute top-1/2 left-10 -translate-y-1/2 text-[#C9A45C]/15 pointer-events-none animate-spin-slow">
         <Flower2 className="w-64 h-64" />
       </div>
-      <div className="absolute top-1/2 right-10 -translate-y-1/2 text-amber-500/10 pointer-events-none animate-spin-slow">
+      <div className="absolute top-1/2 right-10 -translate-y-1/2 text-[#7A1F35]/10 pointer-events-none animate-spin-slow">
         <Flower2 className="w-64 h-64" />
       </div>
 
       <div className="max-w-4xl mx-auto text-center space-y-10 relative z-10">
         <div className="space-y-3">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-stone-900 border border-amber-500/30 text-amber-300 text-xs uppercase tracking-widest font-mono">
-            <Clock className="w-3.5 h-3.5 text-amber-400" />
-            <span>Counting Down The Moments</span>
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#FFF9F0] border border-[#C9A45C] text-[#7A1F35] text-xs uppercase tracking-widest font-mono shadow-sm">
+            <Clock className="w-3.5 h-3.5 text-[#C9A45C]" />
+            <span className="font-semibold">Counting Down The Moments</span>
           </div>
 
-          <h2 className="text-3xl sm:text-5xl font-serif font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-amber-200 via-amber-100 to-amber-300">
+          <h2 className="text-3xl sm:text-5xl font-serif font-extrabold text-[#7A1F35]">
             Counting Down To {BRIDE_NAME} & {GROOM_NAME}'s Forever
           </h2>
 
-          <p className="text-xs sm:text-sm font-serif italic text-amber-200/80">
-            25 & 26 November 2026 • Ahmedabad, Gujarat
+          <p className="text-xs sm:text-sm font-serif italic text-[#332629]/90">
+            25 & 26 November 2026 • Laxmi Party Plot, Himatnagar
           </p>
         </div>
 
@@ -75,17 +75,17 @@ export const CountdownSection: React.FC = () => {
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ delay: idx * 0.1 }}
-              className="relative p-4 sm:p-6 rounded-2xl bg-stone-900/80 backdrop-blur-xl border border-amber-500/30 shadow-2xl flex flex-col items-center justify-center space-y-1 sm:space-y-2 group hover:border-amber-400/60 transition-all"
+              className="relative p-4 sm:p-6 rounded-2xl bg-[#FFF9F0] border-2 border-[#C9A45C] shadow-lg flex flex-col items-center justify-center space-y-1 sm:space-y-2 group hover:border-[#7A1F35] transition-all"
             >
-              <div className="absolute top-2 right-2 text-amber-400/40 group-hover:text-amber-400 transition-colors">
+              <div className="absolute top-2 right-2 text-[#C9A45C]/50 group-hover:text-[#C9A45C] transition-colors">
                 <Flower2 className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
               </div>
 
-              <span className="text-3xl sm:text-5xl md:text-6xl font-serif font-extrabold text-transparent bg-clip-text bg-gradient-to-b from-amber-100 via-amber-300 to-amber-500">
+              <span className="text-3xl sm:text-5xl md:text-6xl font-serif font-extrabold text-[#7A1F35]">
                 {String(item.value).padStart(2, '0')}
               </span>
 
-              <span className="text-[10px] sm:text-xs uppercase font-mono tracking-widest text-stone-400">
+              <span className="text-[10px] sm:text-xs uppercase font-mono tracking-widest text-[#332629] font-medium">
                 {item.label}
               </span>
             </motion.div>
@@ -93,8 +93,8 @@ export const CountdownSection: React.FC = () => {
         </div>
 
         {/* Milestone Note */}
-        <div className="inline-flex items-center gap-2 text-xs font-serif italic text-amber-200/90 bg-stone-900/60 px-6 py-2 rounded-full border border-amber-500/20">
-          <Sparkles className="w-4 h-4 text-amber-400 animate-pulse" />
+        <div className="inline-flex items-center gap-2 text-xs font-serif italic text-[#7A1F35] bg-[#FFF9F0] px-6 py-2 rounded-full border border-[#C9A45C] shadow-sm font-medium">
+          <Sparkles className="w-4 h-4 text-[#C9A45C] animate-pulse" />
           <span>Every second brings us closer to the sacred wedding bells</span>
         </div>
       </div>
