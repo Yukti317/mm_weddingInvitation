@@ -1,13 +1,13 @@
 import { EventDetail, StoryScene, GalleryItem, Blessing } from '../types';
-import img1 from '../../assets/img/img6.jpeg';
-import img2 from '../../assets/img/img2.jpg';
-import img3 from '../../assets/img/img3.jpg';
-import img4 from '../../assets/img/img4.jpeg';
-import img5 from '../../assets/img/img5.jpg';
-import img6 from '../../assets/img/img6.jpeg';
-import img17 from '../../assets/img/img17.jpg';
-import img7 from '../../assets/img/img7.jpeg';
-import img8 from '../../assets/img/img8.jpg';
+import img1 from '../../assets/img-opt/img6.webp';
+import img2 from '../../assets/img-opt/img2.webp';
+import img3 from '../../assets/img-opt/img3.webp';
+import img4 from '../../assets/img-opt/img4.webp';
+import img5 from '../../assets/img-opt/img5.webp';
+import img6 from '../../assets/img-opt/img6.webp';
+import img17 from '../../assets/img-opt/img17.webp';
+import img7 from '../../assets/img-opt/img7.webp';
+import img8 from '../../assets/img-opt/img8.webp';
 
 export const BRIDE_NAME = 'Mukti';
 export const GROOM_NAME = 'Mihir';

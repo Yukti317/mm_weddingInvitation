@@ -2,15 +2,15 @@ import React, { useState } from 'react';
 import { motion } from 'motion/react';
 import { Sparkles, Heart, Bookmark, Star } from 'lucide-react';
 import { COUPLE_PHOTOS } from '../data/couplePhotos';
-import img1 from '../../assets/img/img6.jpeg';
-import img2 from '../../assets/img/img2.jpg';
-import img3 from '../../assets/img/img3.jpg';
-import img4 from '../../assets/img/img4.jpeg';
-import img5 from '../../assets/img/img9.jpg';
-import img6 from '../../assets/img/img1.jpeg';
-import img7 from '../../assets/img/img7.jpeg';
-import img10 from '../../assets/img/img10.jpg';
-import img11 from '../../assets/img/img11.jpg';
+import img1 from '../../assets/img-opt/img6.webp';
+import img2 from '../../assets/img-opt/img2.webp';
+import img3 from '../../assets/img-opt/img3.webp';
+import img4 from '../../assets/img-opt/img4.webp';
+import img5 from '../../assets/img-opt/img9.webp';
+import img6 from '../../assets/img-opt/img1.webp';
+import img7 from '../../assets/img-opt/img7.webp';
+import img10 from '../../assets/img-opt/img10.webp';
+import img11 from '../../assets/img-opt/img11.webp';
 
 export type ArtisticStyle =
   | 'vector'
