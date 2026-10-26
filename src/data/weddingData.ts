@@ -37,25 +37,6 @@ export const WEDDING_EVENTS: EventDetail[] = [
     bgPattern: 'marigold',
   },
 
-  // {
-  //   id: 'mehendi',
-  //   title: 'Mehendi Soirée',
-  //   subTitle: '🌿 Henna Hues & Intricate Stories',
-  //   date: '25 November 2026',
-  //   time: '02:00 PM Onwards',
-  //   venue: 'Royal Mango Grove, Golden Palace Resort',
-  //   locationAddress: 'SG Highway, Ahmedabad, Gujarat',
-  //   mapUrl: 'https://maps.google.com/?q=Golden+Palace+Resort+Ahmedabad',
-  //   dressCode:
-  //     'Bring your brightest smiles and enjoy an evening filled with beautiful traditions!',
-  //   description:
-  //     'Fresh henna fragrance, delicate botanical motifs, live bangles artisan stall, folk singers, and refreshing summer coolers.',
-  //   colorTheme:
-  //     'from-emerald-500/20 via-teal-100/40 to-emerald-50/10',
-  //   iconName: 'Sparkles',
-  //   bgPattern: 'mehendi',
-  // },
-
   {
     id: 'sangeet',
     title: 'Sangeet Night',
@@ -93,6 +74,22 @@ export const WEDDING_EVENTS: EventDetail[] = [
     iconName: 'HeartHandshake',
     bgPattern: 'palace',
   },
+  {
+  id: 'lunch',
+  title: 'Wedding Lunch',
+  subTitle: '🍽️ A Feast of Love & Togetherness',
+  date: '26 November 2026',
+  time: '11:30 AM Onwards',
+  venue: 'Laxami Party Plot, Himmatnagar',
+  locationAddress: 'SG Highway, Ahmedabad, Gujarat',
+  mapUrl: 'https://maps.google.com/?q=Laxami+Party+Plot+Himmatnagar',
+  dressCode: 'Celebrate togetherness with family, food & festive smiles!',
+  description:
+    'Join us for a delightful wedding feast as we celebrate Mukti & Mihir’s special day with delicious food, family, and blessings.',
+  colorTheme: 'from-orange-400/20 via-amber-100/40 to-yellow-50/10',
+  iconName: 'Utensils',
+  bgPattern: 'marigold',
+},
 ];
 
 export const STORY_SCENES: StoryScene[] = [
